@@ -16,4 +16,8 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     // we can call this method using a url like this : /api/products/search/findByCategoryId?id=1
     Page<Product> findByCategoryId(@RequestParam("id") Long id, Pageable pageable);
+
+
+    // we can call this method using a url like this : /api/products/search/findByNameContaining?name=someName
+    Page<Product> findByNameContaining(@RequestParam("name") String name, Pageable pageable);
 }
