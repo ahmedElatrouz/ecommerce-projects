@@ -98,4 +98,8 @@ export class ProductListComponent implements OnInit {
     this.pageNumber = 1;
     this.listProducts();
   }
+
+  addToCart(product: Product) {
+      //TODO .. add to cart
+  }
 }
